@@ -32,16 +32,20 @@ Output:
 
 def answer(area):
     # your code here
-
-    n = ''
-    m = ''
-    area = n**2
-
-
-    result = []
-
-    print result
-
-
-
-print answer(area)
+    import math
+    areaA=area
+    final=[]
+    while area > 0:
+        sqr=math.sqrt(area)
+        intSqr=int(math.sqrt(area))
+        if (sqr-intSqr):
+            area-=1
+        elif area==1:
+            final.append(area)
+            areaA=areaA-area
+            area=areaA
+        else:
+            final.append(area)
+            areaA=areaA-area
+            area=areaA
+    return final
